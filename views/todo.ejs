@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+  <a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+  <div style="height: 560px;">
+    <div class="containerN box">
+      <h1>
+        <%= new Date().toLocaleString("en-US", {weekday: 'long' , month: 'long' , day: 'numeric' }); %>
+      </h1>
+    </div>
+    <div class="card-todo">
+      <form class="" action="/todo" method="post">
+        <label for="exampleFormControlInput1" class="form-label">Enter Your Task</label>
+        <input required type="text" name="newItem" id="exampleFormControlInput1" class="enterTask form-control" value=""
+          placeholder="Please enter your task" autocomplete="off">
+        <button class="btn btn-primary" type="submit" name="list">Add</button>
+    </div>
+    <div class="todo-content">
+      <% newListItems.forEach(function (item) { %>
+        <form action="/delete" method="Post">
+          <div class="item">
+            <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()" class="m-3">
+            <p>
+              <%= item.name %>
+            </p>
+          </div>
+        </form>
+        <% }) %>
+    </div>
+  </div>
+  <%- include("partials/footer.ejs") %>
