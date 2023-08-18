@@ -106,7 +106,7 @@ app.get("/register", function (req, res) {
 });
 app.route("/todo").get((req, res) => {
     if (req.isAuthenticated()) {
-        console.log(passport)
+        // console.log(passport)
         const hw = req.user.id
         const item1 = new Item({
             name: "Welcome to your todoList",
@@ -123,7 +123,7 @@ app.route("/todo").get((req, res) => {
         const defaultItems = [item1, item2, item3];
         const tasks = req.body.newItem
 
-        console.log(hw)
+        // console.log(hw)
         const gg = Item.find({ userId: req.user.id })
         // console.log(gg)
 
