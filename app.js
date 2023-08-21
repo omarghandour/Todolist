@@ -70,7 +70,7 @@ passport.deserializeUser(function (user, cb) {
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/todo"
+    callbackURL: "https://ghandour.fun/auth/todo"
 },
     function (accessToken, refreshToken, profile, cb) {
         const gname = profile.displayName
