@@ -1,0 +1,130 @@
+.centered {
+  padding-top: 200px;
+  text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+
+* {
+  margin: 0;
+
+}
+
+body {
+  background-color: #e4e9fd !important;
+  height: 97vh;
+}
+
+header .hco img {
+  margin: 10px;
+  width: 30px;
+}
+
+header .hco {
+  margin: 20px;
+}
+
+.containerN {
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.aN {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+
+.containerN h1 {
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #a683e3;
+  text-align: center;
+}
+
+.card-todo {
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.card-todo form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-todo form input {
+  border-radius: 5px;
+  width: 300px;
+}
+
+.todo-content {
+  max-width: 400px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  max-height: 300px;
+  overflow: overlay;
+}
+
+@media (max-width: 600px) {
+  .todo-content {
+    max-width: 330px;
+  }
+}
+
+.todo-content .item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  overflow: overlay;
+
+
+
+}
+
+.todo-content p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  /* font-weight: 200; */
+  color: #00204a;
+  overflow: overlay;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #A683E3;
+
+}
+
+;
+
+input[type="checkbox"] {
+  margin: 20px;
+  background-color: #A683E3;
+  color: #a683e3;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
